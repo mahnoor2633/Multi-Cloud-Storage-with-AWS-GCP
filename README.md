@@ -1,7 +1,7 @@
 This project demonstrates how to build a multi-cloud storage backup pipeline by copying objects from AWS S3 into Google Cloud Storage (GCS) using Google Storage Transfer Service. The goal is to create a resilient, reliable, and vendor-lock-in–avoidant storage design for data availability and disaster recovery. 
 
 
-**WHAT THIS PROJECT COVERS**
+🚀**WHAT THIS PROJECT COVERS**
 
 - Creating and populating an AWS S3 bucket (source). 
 
@@ -11,23 +11,26 @@ This project demonstrates how to build a multi-cloud storage backup pipeline by 
 
 - Creating a GCS bucket (destination) and verifying the transfer results. 
 
-**ARCHITECTURE (HIGH-LEVEL)**
+🏗 **ARCHITECTURE (HIGH-LEVEL)**
 
 - AWS S3 (source bucket) → GCP Storage Transfer Service → GCS bucket (destination)
 
 - Federated access is handled via an AWS IAM role trusted by Google’s Storage Transfer identity. 
 
-**PREREQUISITES**
+🛠**PREREQUISITES**
 
 - AWS account
 
 - GCP account 
 
-**STEP-BY-STEP IMPLEMENTATION**
+📌**STEP-BY-STEP IMPLEMENTATION**
 https://docs.google.com/document/d/19zTzB8bZQMx0na-Jsyk5-mCGk7_uwIUBa0rw_Sq5XJk/edit?usp=sharing
 
-**SECURITY NOTES**
+🔐**SECURITY NOTES**
 
 - Uses federated identity instead of long-lived AWS keys.
 
 - Access is granted via short-lived session credentials, reducing credential exposure risk.
+
+📈**OUTCOME**
+A working cross-cloud transfer pipeline that improves availability, redundancy, and disaster recovery readiness by distributing storage across AWS and GCP.
